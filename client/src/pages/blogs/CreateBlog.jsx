@@ -80,7 +80,7 @@ const CreateBlog = () => {
               className="hidden"
               id="input-file"
               accept="image/*"
-              required
+              // required
             />
           </div>
           {img && (

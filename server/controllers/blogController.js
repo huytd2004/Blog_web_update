@@ -53,8 +53,18 @@ export const createBlog = async (req, res) => {
 
   try {
     // Upload image to Cloudinary
-    const imgUrl = await uploadOnCloudinary(req.file.path);
-
+    let imgUrl;
+    
+    // Check if file was uploaded
+    if (req.file) {
+      // Upload image to Cloudinary if file exists
+      imgUrl = await uploadOnCloudinary(req.file.path);
+      // Delete uploaded file after cloudinary upload
+      await fs.unlinkSync(req.file.path);
+    } else {
+      // Use default image if no file was uploaded
+      imgUrl = await uploadOnCloudinary('./uploads/default.jpg');
+    }
     if (!imgUrl) {
       throw new Error("Failed to upload image to Cloudinary");
     }
@@ -71,7 +81,7 @@ export const createBlog = async (req, res) => {
       author: user.username,
     });
     await newBlog.save();
-    await fs.unlinkSync(req.file.path);
+    // await fs.unlinkSync(req.file.path);
     res.status(201).json({ message: "Blog created successfully" });
   } catch (error) {
     console.error("Error creating blog:", error);

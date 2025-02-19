@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap");
+@tailwind base;
+body {
+  background: rgb(24, 24, 27);
+  color: white;
+}
+@tailwind components;
+@tailwind utilities;
+
+.ql-editor {
+  min-height: 15rem;
+  max-height: 20rem;
+  background: rgb(39, 39, 42);
+  color: white;
+  font-size: 1rem;
+  overflow-y: scroll !important;
+}
+.ql-container.ql-snow,
+.ql-toolbar.ql-snow {
+  border: 1px solid rgb(82, 82, 91) !important;
+}
+* {
+  scrollbar-width: auto;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: black;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #cc17f0;
+  border-radius: 20px;
+}

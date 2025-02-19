@@ -60,7 +60,7 @@ export const createBlog = async (req, res) => {
       // Upload image to Cloudinary if file exists
       imgUrl = await uploadOnCloudinary(req.file.path);
       // Delete uploaded file after cloudinary upload
-      await fs.unlinkSync(req.file.path);
+      await fs.unlinkSync(req.file.path); 
     } else {
       // Use default image if no file was uploaded
       imgUrl = await uploadOnCloudinary('./uploads/default.jpg');

@@ -24,7 +24,7 @@ const Navbar = () => {
     <div className="fixed top-0 sm:top-5 left-0 w-full h-16 flex justify-center items-center z-50">
       <div className="sm:bg-black gap-4 backdrop-blur-md flex items-center justify-between sm:justify-normal sm:rounded-xl p-4 w-full sm:w-auto h-16">
         <h2 className="text-2xl text-white font-bold">
-          Blog Tech
+          Blog Web
         </h2>
         <div
           className={`absolute rounded-2xl sm:relative ${active} sm:top-0 sm:right-0 sm:shadow-none transition-all duration-300 w-44 sm:w-auto bg-black`}

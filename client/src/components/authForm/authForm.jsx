@@ -31,7 +31,7 @@ const AuthForm = () => {
     <div className="w-[90%] sm:w-[fit-content] p-8 gap-4 border border-zinc-700 rounded-2xl flex flex-col items-center">
       <div>
         <h1 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
-          Welcome to Blog-Tech
+          Welcome to Blog-Web
         </h1>
         <h1 className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
           {isLogin

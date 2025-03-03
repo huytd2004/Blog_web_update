@@ -3,6 +3,7 @@ import { BiMessageDetail, BiX } from 'react-icons/bi';
 import { Info } from '../utils/Info';
 
 const Chatbot = () => {
+  const API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBL-MAvgQ8L5rQ3WHldaZMSjHo7Yst4WyU";
   //Khởi tạo state
   const [messages, setMessages] = useState([]); 
   const [input, setInput] = useState(''); 
@@ -37,7 +38,7 @@ Remember to:
     setChatHistory(newChatHistory);
 
     try {
-      const response = await fetch(import.meta.env.VITE_API_URL, {
+      const response = await fetch(API_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json', 

@@ -13,3 +13,6 @@ To get started with this project, follow these steps:
 5. Run the backend server using `npm start` in the `/server` directory.
 6. Run the frontend development server using `npm run dev` in the `/client` directory.
 7. Access the application at `http://localhost:5173`.
+
+### Demo 
+https://blog-web-update-1.onrender.com/

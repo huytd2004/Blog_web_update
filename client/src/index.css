@@ -32,6 +32,6 @@ body {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #cc17f0;
+  background-color: #fff;
   border-radius: 20px;
 }

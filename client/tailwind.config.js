@@ -12,6 +12,19 @@ export default {
       animation: {
         "pulse-slow": "pulse 3s ease-in-out infinite", // Example custom animation
         "bounce-slow": "bounce 3s ease-in-out infinite",
+        'fade-up': 'fade-up 0.3s ease-out'
+      },
+      keyframes: {
+        'fade-up': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(10px)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)'
+          },
+        }
       },
     },
     fontFamily: {

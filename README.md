@@ -1,6 +1,7 @@
 # Description
 
 **Blog_web** is a simple web application built with React.js for the frontend, Node.js and Express.js for the backend, connecting to MongoDB for data management.
+Update from : https://github.com/huytd2004/Blog_web
 
 ## Installation Guide
 

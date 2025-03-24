@@ -3,6 +3,7 @@ import { redirect, useNavigate, useSearchParams } from "react-router-dom";
 import AuthForm from "../../components/authForm/authForm";
 import { AuthContext } from "../../context/Authentication";
 
+//Auth -> gọi đến AuthForm -> action -> gửi request đến server -> nhận token -> lưu token vào localStorage -> lưu trạng thái isAuth vào context -> chuyển hướng về trang chủ
 const Auth = () => {
   const [searchParams] = useSearchParams();
   const redirect = useNavigate();
@@ -24,6 +25,8 @@ const Auth = () => {
 };
 export default Auth;
 
+
+//function xảy ra khi submit form
 export async function action({ request }) {
   const params = new URL(request.url).searchParams;
   const mode = params.get("mode") || "login";

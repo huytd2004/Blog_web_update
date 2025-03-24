@@ -9,23 +9,27 @@ import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 const Home = () => {
+  // Get category from URL
   const [searchParams] = useSearchParams();
   const category = searchParams.get("category") || "all";
-  const search = useRef("");
+
+  const search = useRef(""); // lưu trữ giá trị của input search mà không bị render lại
   const [searchRes, setSearchRes] = useState([]);
-  const [isFocused, setIsFocused] = useState(false);
+  const [isFocused, setIsFocused] = useState(false); 
+
+  // Lấy dữ liệu blog theo category
   const { data, loading } = useFetch(
     `get-blogs/?category=${category}`,
     `home/${category}`
   );
   const { fetchData } = useSend();
-
   const searchHandler = async () => {
+    // Lấy dữ liệu blog theo từ khóa tìm kiếm
     const res = await fetchData(`search/${search.current.value}`);
     setSearchRes(res);
-    res && res.length > 0 && setIsFocused(true);
+    res && res.length > 0 && setIsFocused(true); 
   };
-
+  // Khi input mất focus thì ẩn dropdown
   const handleInputBlur = () => {
     setTimeout(() => {
       setIsFocused(false);
@@ -101,7 +105,7 @@ const Home = () => {
               }`}
             >
               <Link to={`/?category=${items}`}>
-                {capitalizeFirstLetter(items)}
+                {capitalizeFirstLetter(items)} 
               </Link>
             </li>
           ))}

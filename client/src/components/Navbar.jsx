@@ -5,7 +5,7 @@ import { MdClose } from "react-icons/md";
 import { AuthContext } from "../context/Authentication";
 
 const Navbar = () => {
-  const { isAuth, setIsAuth, username } = useContext(AuthContext);
+  const { isAuth, setIsAuth, username } = useContext(AuthContext); //gọi đến context Authentication để lấy giá trị isAuth và setIsAuth
   const pre = "top-[-22rem] right-[-5rem]";
   const post = "right-[1.5rem] top-20 shadow-xl bg-black";
   const [active, setActive] = useState(pre);

@@ -1,11 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
 
+// Dùng để lấy dữ liệu từ server (Get)
 const useFetch = (url, queryKey) => {
   const token = localStorage.getItem("authToken");
-
+  
+  // useQuery hook giúp gửi request lên server và lấy dữ liệu về
   const { isPending, error, isError, data, refetch } = useQuery({
-    queryKey: [queryKey],
-    queryFn: async ({ signal }) => {
+    queryKey: [queryKey], // queryKey là mảng chứa các giá trị để xác định cache
+    queryFn: async ({ signal }) => { // queryFn là hàm gửi request lên server
       try {
         const response = await fetch(import.meta.env.VITE_BASE_URL + url, {
           headers: {

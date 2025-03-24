@@ -1,17 +1,18 @@
 import { useContext, useEffect } from "react";
 import {
-  Form,
+  Form,  
   Link,
-  useSearchParams,
-  useActionData,
-  useNavigation,
+  useSearchParams, //Lấy các tham số tìm kiếm từ URL
+  useActionData, //Lấy dữ liệu trả về từ action của form
+  useNavigation, //Lấy trạng thái điều hướng của form
 } from "react-router-dom";
 import { AuthContext } from "../../context/Authentication";
 
+//Giao diện form Login/Sign up
 const AuthForm = () => {
   const [searchParams] = useSearchParams();
   const isLogin = searchParams.get("mode") === "login";
-  const data = useActionData();
+  const data = useActionData(); //Lấy dữ liệu trả về từ action của form
   const { setIsAuth, setUserName } = useContext(AuthContext);
   const navigation = useNavigation();
   const isSubmitting = navigation.state === "submitting";

@@ -3,7 +3,7 @@ import { BiMessageDetail, BiX } from 'react-icons/bi';
 import { Info } from '../utils/Info';
 
 const Chatbot = () => {
-  const API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBL-MAvgQ8L5rQ3WHldaZMSjHo7Yst4WyU";
+  const API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUiw6fPqNvMbzzsAoFX2feIaZBxlQKVgU";
   //Khởi tạo state
   const [messages, setMessages] = useState([]); 
   const [input, setInput] = useState(''); 

@@ -15,4 +15,4 @@ To get started with this project, follow these steps:
 7. Access the application at `http://localhost:5173`.
 
 ### Demo 
-https://blog-web-update-1.onrender.com/
+https://blog-web-update-1.onrender.com/ or https://blog-web-update.vercel.app/

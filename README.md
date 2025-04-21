@@ -2,6 +2,12 @@
 
 **Blog_web** is a simple web application built with React.js for the frontend, Node.js and Express.js for the backend, connecting to MongoDB for data management.
 Update from : https://github.com/huytd2004/Blog_web
+## Features 
+- **User Authentication**: Allows users to securely register, log in, and log out of their accounts.
+- **Post Creation and Management**: Logged-in users have the ability to create, update, and delete their own blog posts with ease.
+- **Content Browsing and Interaction**: All visitors can explore published blog posts, read full content, and participate through the comment section.
+- **Responsive Interface**: The platform is optimized for all screen sizes, delivering a smooth and consistent user experience across desktop, tablet, and mobile devices.
+- **AI Chatbot Assistant**: Integrated AI chatbot to  answer frequently asked questions.
 
 ## Installation Guide
 
